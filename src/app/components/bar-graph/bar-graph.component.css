@@ -1,0 +1,16 @@
+.bar-graph {
+  height: 300px;
+}
+
+::ng-deep .bar-graph .legend-wrap .legend-labels.horizontal-legend {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+::ng-deep .chart-legend .legend-label:hover{
+  color: #e2e2e2 !important;
+}
+::ng-deep .chart-legend .legend-label .active .legend-label-text {
+  color: #e2e2e2 !important;
+}

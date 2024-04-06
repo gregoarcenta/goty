@@ -1,0 +1,45 @@
+<h2 class="fw-bold text-center text-uppercase">Vota por el juego del año</h2>
+
+<hr />
+
+@defer (when (games$ | async)!.length > 0) {
+<section
+  class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3"
+  data-bs-theme="dark"
+>
+  @for (game of games$ | async; track game.id) {
+  <div class="col">
+    <app-game-card [game]="game" />
+  </div>
+  }
+</section>
+}@placeholder(minimum 800ms) {
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">
+  @for (_ of [1,2,3,4]; track $index) {
+  <div class="col">
+    <div class="card" aria-hidden="true" data-bs-theme="dark">
+      <div class="placeholder-glow">
+        <span class="placeholder col-12" style="height: 200px"></span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h5>
+        <p class="card-text placeholder-glow">
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder col-8"></span>
+        </p>
+        <a
+          class="btn btn-outline-warning disabled placeholder col-12"
+          aria-disabled="true"
+          >Votar</a
+        >
+      </div>
+    </div>
+  </div>
+  }
+</div>
+}

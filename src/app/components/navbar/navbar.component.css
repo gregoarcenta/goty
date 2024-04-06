@@ -1,0 +1,7 @@
+.navbar-brand {
+  font-family: "Rubik Dirt", system-ui;
+}
+
+.navbar{
+  z-index: 9000
+}

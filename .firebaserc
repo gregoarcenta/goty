@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "goty-35ebb": {
+      "hosting": {
+        "goty": [
+          "goty-35ebb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "goty-35ebb"
+  }
+}

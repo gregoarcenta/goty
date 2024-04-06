@@ -1,0 +1,13 @@
+<h2 class="text-center fw-bold text-uppercase">Juego del año</h2>
+
+<hr>
+
+@defer (when games().length > 0; ) {
+  <app-bar-graph [results]="games()"/>
+}@placeholder(minimum 800ms)  {
+  <div class="placeholder-glow" aria-hidden="true">
+    <span class="placeholder col-12" style="height: 300px;"></span>
+    <span class="placeholder col-9 mt-2" style="height: 50px;"></span>
+  </div>
+}
+
